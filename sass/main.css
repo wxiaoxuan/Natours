@@ -42,17 +42,17 @@ body {
   /* clip path: clip image */
 }
 
-.header_logo-box {
+.logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.header_logo {
+.logo {
   height: 3.5rem;
 }
 
-.header .text-box {
+.text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -67,14 +67,14 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   /* remove shaky effect */
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
-.heading-primaryprimary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
   -webkit-animation-duration: 1s;
@@ -84,11 +84,11 @@ body {
   /* animation-delay: 3s; */
 }
 
-.heading-primaryprimary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 15px;
+  letter-spacing: 1.5rem;
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
 }
@@ -214,16 +214,17 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover:hover::after {
+.btn:hover::after {
   -webkit-transform: scaleX(1.4) scaleY(1.6);
           transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
