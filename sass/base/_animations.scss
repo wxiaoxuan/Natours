@@ -1,0 +1,50 @@
+/* ANIMATIONS  */
+@keyframes moveInLeft {
+    /* start */
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    80% {
+      transform: translateX(10px);
+    }
+  
+    /* end */
+    100% {
+      opacity: 1;
+      transform: translate(0); /* back to original  */
+    }
+  }
+  
+  @keyframes moveInRight {
+    /* start */
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    80% {
+      transform: translateX(-10px);
+    }
+  
+    /* end */
+    100% {
+      opacity: 1;
+      transform: translate(0); /* back to original  */
+    }
+  }
+  
+  @keyframes moveInBottom {
+    /* start */
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    /* end */
+    100% {
+      opacity: 1;
+      transform: translate(0); /* back to original  */
+    }
+  }
