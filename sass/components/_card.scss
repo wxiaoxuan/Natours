@@ -1,0 +1,38 @@
+.card {
+  //the lower the value, the more dramatic the perspective is
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    background-color: orange;
+    color: white;
+    
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: orange;
+    }
+
+    &--back {
+      background-color: lightskyblue;
+      transform: rotateY(180deg);
+    }
+  }
+
+  //.card:hover .card__side
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
