@@ -1,0 +1,44 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    border-radius: 3px;
+    background-color: $color-white;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg); //step 1. tilt the text and images 
+
+    //step 2. Make the text straight back 
+    //use the direct child selector and select everything 
+    & > * {
+        transform: skewX(12deg);
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        // background-color: burlywood;
+        float: left;
+
+        // shape-outside: define the content that floats around the element 
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+
+        //clip-path: to make the element look like a circle 
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+
+        //transform: allow to move the floated elements ; dun mess w the margins 
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    //Flexible images for responsive web design ==> always need a width/height
+    &__img {
+        height: 100%; //100% of 15rem height 
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+}
