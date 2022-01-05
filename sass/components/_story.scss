@@ -31,14 +31,44 @@
 
         //transform: allow to move the floated elements ; dun mess w the margins 
         transform: translateX(-3rem) skewX(12deg);
+
+        position: relative;
     }
 
     //Flexible images for responsive web design ==> always need a width/height
     &__img {
         height: 100%; //100% of 15rem height 
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden; //fix glitch
+        transition: all .5s;
     }
 
     &__text {
         transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0; //invisible 
+        transition: all .5s;
+        backface-visibility: hidden; //fix glitch
+    }
+
+    //as soon as the story is hovered, we change the caption 
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
 }
