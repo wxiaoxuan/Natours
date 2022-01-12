@@ -267,8 +267,8 @@
       <section class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
-            <source src="img/video.mp4" type="video/mp4">
-            <source src="img/video.webm" type="video/webm">
+            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
             Your browser is not supported!
           </video>
         </div>
@@ -339,36 +339,70 @@
         </div>
       </section>
 
-<section class="section-book">
-  <div class="row">
-    <div class="book">
-      <div class="book__form">
-        <form action="#" class="form">
+      <!-- BOOK SECTION -->
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-center-text u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
 
-          <div class="u-center-text u-margin-bottom-medium">
-            <h2 class="heading-secondary">
-              Start booking now
-            </h2>
+                <!-- NAME -->
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label paragraph"
+                    >Full name</label
+                  >
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label paragraph"
+                    >Email address</label
+                  >
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="small" name="size">
+                    <label for="small" class="form__radio-label">
+                      <!-- this span radio-button will hide the radio-input -->
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="large" name="size">
+                    <label for="large" class="form__radio-label">
+                       <!-- this span radio-button will hide the radio-input -->
+                       <span class="form__radio-button"></span>
+                       Large tour group
+                      </label>
+                  </div>
+                </div>
+
+              </form>
+            </div>
           </div>
-
-          <!-- NAME -->
-          <div class="form__group">
-            <input type="text" class="form__input" placeholder="Full Name" id="name" required>
-            <label for="name" class="form__label paragraph">Full name</label>
-          </div>
-
-          <!-- EMAIL -->
-          <div class="form__group">
-            <input type="email" class="form__input" placeholder="Email address" id="email" required>
-            <label for="email" class="form__label paragraph">Email address</label>
-          </div>
-
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
     </main>
 
     <!-- ONLY FOR GRID SAMPLE -->
