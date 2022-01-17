@@ -6,9 +6,14 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 9999;
+  //display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 
   &__content {
     @include absCenter;
+
     width: 75%;
     height: 50rem;
     background-color: $color-white;
@@ -16,6 +21,9 @@
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+    transition: all .5s .2s; //transition delay (3rd element)
   }
 
   &__left {
@@ -41,7 +49,7 @@
     font-size: 1.4rem;
     margin-bottom: 4rem;
 
-    // to support different browsers 
+    // to support different browsers
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid $color-grey-light-2;
@@ -50,11 +58,42 @@
     column-gap: 4rem; //1em == 14px
     column-rule: 1px solid $color-grey-light-2; //the line btw column
 
-    // to support different browsers 
+    // to support different browsers
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
 
     hyphens: auto;
   }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  //popup here becomes the target and style the child element of popup content
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+        color: $color-grey-dark;
+        position: absolute; //positioned to 1st positioned parent 
+        top: 2.5rem;
+        right: 2.5rem;
+        font-size: 3rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        line-height: 1;
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+  }
+
 }
