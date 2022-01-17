@@ -7,3 +7,10 @@
         clear: both; //clear both left or right for float 
     }
 }
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
